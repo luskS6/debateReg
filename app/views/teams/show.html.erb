@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Team Name: </b>
+  <%= @team.teamName %>
+</p>
+
+<p>
+  <b>Leader First Name: </b>
+  <%= @team.tfirstName1 %>
+</p>
+
+<p>
+  <b>Leader Last Name: </b>
+  <%= @team.tlastName1 %>
+</p>
+
+<p>
+  <b>Member First Name: </b>
+  <%= @team.tfirstName2 %>
+</p>
+
+<p>
+  <b>Member Last Name: </b>
+  <%= @team.tlastName2 %>
+</p>
+
+<p>
+  <b>Seed: </b>
+  <%= @team.tseed %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Add another team?', new_team_path %>

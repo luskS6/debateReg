@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Need an Early invoice? :</b>
+  <%= @admin.early_invoice %>
+</p>
+
+<p>
+  <b>Contact 1:</b>
+  <%= @admin.contact1 %>
+</p>
+
+<p>
+  <b>Phone Number:</b>
+  <%= @admin.phoneNum1 %>
+</p>
+
+<p>
+  <b>Contact 2:</b>
+  <%= @admin.contact2 %>
+</p>
+
+<p>
+  <b>Phone Number:</b>
+  <%= @admin.phoneNum2 %>
+</p>
+
+
+
+
+
+
+<%= link_to 'Edit', edit_admin_path(@admin) %> |
+<%= link_to 'Back to Home', main_index_path %>|
+<% if Hotel.find_by_school_id(current_school) %> 
+<%= link_to 'Next to Hotels', edit_hotel_path(Hotel.find_by_school_id(current_school)) %>
+<% else %> 
+<%= link_to 'Next to Hotels', new_hotel_path %>
+<% end %> 

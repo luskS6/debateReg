@@ -1,0 +1,44 @@
+<%= form_for(@team) do |f| %>
+  <% if @team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+      <% @team.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    Team Name<br />
+    <%= f.text_field :teamName %>
+  </div>
+  <div class="field">
+    Leader First Name<br />
+    <%= f.text_field :tfirstName1 %>
+  </div>
+  <div class="field">
+    Leader Last Name<br />
+    <%= f.text_field :tlastName1 %>
+  </div>
+  <div class="field">
+    Member First Name<br />
+    <%= f.text_field :tfirstName2 %>
+  </div>
+  <div class="field">
+    Member Last Name<br />
+    <%= f.text_field :tlastName2 %>
+  </div>
+  <div class="field">
+    Seed<br />
+    <%= select_tag(:tseed, options_for_select([ ['Novice', 'Novice'],['Varsity','Varsity'],['Hybrid','Hybrid']])) %>
+ 
+  </div>
+  
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

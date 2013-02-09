@@ -1,0 +1,44 @@
+<%= form_for(@admin) do |f| %>
+  <% if @admin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin.errors.count, "error") %> prohibited this admin from being saved:</h2>
+
+      <ul>
+      <% @admin.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Do you need an early invoice?" %><br />
+    <%= f.check_box :early_invoice %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Point of Contact 1" %><br />
+    <%= f.text_field :contact1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Phone Number" %><br />
+    <%= f.text_field :phoneNum1 %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label "Point of Contact 2" %><br />
+    <%= f.text_field :contact2, :contact1_confirmation %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "Phone Number" %><br />
+    <%= f.text_field :phoneNum2 %>
+  </div>
+
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

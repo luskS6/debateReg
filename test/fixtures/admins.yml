@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  early_invoice: false
+  phoneNum1: MyString
+  contact1: MyString
+  phoneNum2: MyString
+  contact2: MyString
+  school_id: 1
+
+two:
+  early_invoice: false
+  phoneNum1: MyString
+  contact1: MyString
+  phoneNum2: MyString
+  contact2: MyString
+  school_id: 1

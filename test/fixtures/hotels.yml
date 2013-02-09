@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  twoRooms: 1
+  fourRooms: 1
+  school_id: 1
+
+two:
+  twoRooms: 1
+  fourRooms: 1
+  school_id: 1

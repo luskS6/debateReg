@@ -1,0 +1,41 @@
+<h1>Listing teams</h1>
+<%= link_to 'Show All Teams', teams_path %>
+<% for school in @schools.sort{|a,b| a.sName <=> b.sName } %>
+<%= link_to school.sName, teams_path({:sView => school.id})%> |
+<% end %>
+
+<table>
+  <tr>
+    <th>Teamname</th>
+    <th>Tfirstname1</th>
+    <th>Tlastname1</th>
+    <th>Tfirstname2</th>
+    <th>Tlastname2</th>
+    <th>Tseed</th>
+    <th>Texp</th>
+    <th>School</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @teams.each do |team| %>
+  <tr>
+    <td><%= team.teamName %></td>
+    <td><%= team.tfirstName1 %></td>
+    <td><%= team.tlastName1 %></td>
+    <td><%= team.tfirstName2 %></td>
+    <td><%= team.tlastName2 %></td>
+    <td><%= team.tseed %></td>
+    <td><%= team.texp %></td>
+    <td><%= team.school.sName %></td>
+    <td><%= link_to 'Show', team %></td>
+    <td><%= link_to 'Edit', edit_team_path(team) %></td>
+    <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Team', new_team_path %>

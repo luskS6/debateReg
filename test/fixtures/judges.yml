@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  jfirstName: MyString
+  jlastName: MyString
+  debate_exp: MyString
+  school_id: 1
+
+two:
+  jfirstName: MyString
+  jlastName: MyString
+  debate_exp: MyString
+  school_id: 1

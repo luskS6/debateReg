@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First Name: </b>
+  <%= @judge.jfirstName %>
+</p>
+
+<p>
+  <b>Last Name: </b>
+  <%= @judge.jlastName %>
+</p>
+
+<p>
+  <b>Debate Experience: </b>
+  <%= @judge.debate_exp %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_judge_path(@judge) %> |
+<%= link_to 'Add another judge', new_judge_path %>

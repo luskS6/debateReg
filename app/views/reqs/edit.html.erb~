@@ -1,0 +1,6 @@
+<h1>Editing req</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @req %> |
+<%= link_to 'Back to Transportation', edit_transpo_path(req.find_by_school_id(current_school)) %>

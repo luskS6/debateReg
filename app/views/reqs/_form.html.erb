@@ -1,0 +1,26 @@
+<%= form_for(@req) do |f| %>
+  <% if @req.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@req.errors.count, "error") %> prohibited this req from being saved:</h2>
+
+      <ul>
+      <% @req.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <%= f.label "Any dietary restrictions?" %><br />
+    <%= f.text_area :diet %>
+  </div>
+  <div class="field">
+    <%= f.label "Or anything else we can do to make your West Point experience more enjoyable?" %><br />
+    <%= f.text_area :special %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

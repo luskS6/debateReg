@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Friday pickup?</b>
+  <%= @transpo.fpickup %>
+</p>
+
+<p>
+  <b>Friday when:</b>
+  <%= @transpo.fpickup_time %>
+</p>
+
+<p>
+  <b>Fpickup How many?</b>
+  <%= @transpo.fpickup_number %>
+</p>
+
+<p>
+  <b>Saturday pickup?</b>
+  <%= @transpo.spickup %>
+</p>
+
+<p>
+  <b>Saturday pick up when?</b>
+  <%= @transpo.spickup_time %>
+</p>
+
+<p>
+  <b>How many?</b>
+  <%= @transpo.spickup_number %>
+</p>
+
+<p>
+  <b>Saturday drop off?</b>
+  <%= @transpo.sdropoff %>
+</p>
+
+<p>
+  <b>Saturday drop off when?</b>
+  <%= @transpo.sdropoff_time %>
+</p>
+
+<p>
+  <b>How many?</b>
+  <%= @transpo.sdropoff_number %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_transpo_path(@transpo) %> |
+<%= link_to 'Back to Hotels', edit_hotel_path(Hotel.find_by_school_id(current_school)) %> |
+<% if Req.find_by_school_id(current_school) %> 
+<%= link_to 'Next to Special Requirements', edit_req_path(req.find_by_school_id(current_school)) %>
+<% else %>
+<%= link_to 'Next to Special Requirements', new_req_path %>
+<% end %> 

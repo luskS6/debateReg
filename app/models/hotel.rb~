@@ -1,0 +1,4 @@
+class Hotel < ActiveRecord::Base
+  attr_accessible :fourRooms, :school_id, :twoRooms
+  belongs_to :school
+end

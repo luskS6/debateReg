@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b># of Double Occupancy Rooms requested: </b>
+  <%= @hotel.twoRooms %>
+</p>
+
+<p>
+  <b># of 4 person Occupancy Rooms requested: </b>
+  <%= @hotel.fourRooms %>
+</p>
+
+
+<%= link_to 'Edit', edit_hotel_path(@hotel) %> |
+<%= link_to 'Back to Admin', edit_admin_path(Admin.find_by_school_id(current_school)) %> |
+<% if Transpo.find_by_school_id(current_school) %> 
+<%=  link_to 'Next to Transportation', edit_transpo_path(Transpo.find_by_school_id(current_school)) %>
+<% else %> 
+<%=  link_to 'Next to Transportation', new_transpo_path %>
+<% end %> 
+

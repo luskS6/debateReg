@@ -1,0 +1,33 @@
+<h1>Listing admins</h1>
+
+<table>
+  <tr>
+    <th>Early invoice</th>
+    <th>Phonenum1</th>
+    <th>Contact1</th>
+    <th>Phonenum2</th>
+    <th>Contact2</th>
+    <th>School</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admins.each do |admin| %>
+  <tr>
+    <td><%= admin.early_invoice %></td>
+    <td><%= admin.phoneNum1 %></td>
+    <td><%= admin.contact1 %></td>
+    <td><%= admin.phoneNum2 %></td>
+    <td><%= admin.contact2 %></td>
+    <td><%= admin.school_id %></td>
+    <td><%= link_to 'Show', admin %></td>
+    <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
+    <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Admin', new_admin_path %>

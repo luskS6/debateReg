@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fpickup: false
+  fpickup_time: 2013-02-07 17:43:31
+  fpickup_number: 1
+  spickup: false
+  spickup_time: 2013-02-07 17:43:31
+  spickup_number: 1
+  sdropoff: false
+  sdropoff_time: 2013-02-07 17:43:31
+  sdropoff_number: 1
+  school_id: 1
+
+two:
+  fpickup: false
+  fpickup_time: 2013-02-07 17:43:31
+  fpickup_number: 1
+  spickup: false
+  spickup_time: 2013-02-07 17:43:31
+  spickup_number: 1
+  sdropoff: false
+  sdropoff_time: 2013-02-07 17:43:31
+  sdropoff_number: 1
+  school_id: 1

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<p>
+  <b>Dietary Needs</b>
+  <%= @req.diet %>
+</p>
+
+<p>
+  <b>Anything else?</b>
+  <%= @req.special %>
+</p>
+
+
+<%= link_to 'Edit', edit_req_path(@req) %> |
+<%= link_to 'Back to Transportation', edit_transpo_path(req.find_by_school_id(current_school)) %> |
+<%= link_to 'Next', main_index_path %>

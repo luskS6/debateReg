@@ -1,0 +1,6 @@
+<h1>Editing transpo</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @transpo %> |
+<%= link_to 'Back to Hotels', edit_hotel_path(Hotel.find_by_school_id(current_school)), :style => "color:black" %>

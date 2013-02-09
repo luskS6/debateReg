@@ -1,0 +1,6 @@
+<h1>Editing hotel</h1>
+
+<%= render 'form' %>
+
+
+<%= link_to 'Back', edit_admin_path(Admin.find_by_school_id(current_school)) %>
