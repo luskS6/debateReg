@@ -8,8 +8,8 @@ gem 'rails', '3.2.11'
 #gem 'sqlite3'
 gem 'devise'
 gem 'cancan'
-#gem 'pg'
-#gem 'heroku'
+gem 'pg'
+gem 'heroku'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -25,8 +25,8 @@ end
 
 gem 'jquery-rails'
 
-group :development, :test do
-  gem 'sqlite3'
+#group :development, :test do
+#  gem 'sqlite3'
 end
 group :production do
   gem 'pg'
