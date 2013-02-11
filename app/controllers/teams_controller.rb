@@ -44,6 +44,7 @@ class TeamsController < ApplicationController
     @team = Team.new(params[:team])
     @team.school_id = current_school.id
     @team.tseed = (params[:tseed])
+    @team.texp = (params[:texp])
 
     respond_to do |format|
       if @team.save
@@ -61,6 +62,7 @@ class TeamsController < ApplicationController
   def update
     @team = Team.find(params[:id])
     @team.tseed = (params[:tseed])
+    @team.texp = (params[:texp])
 
     respond_to do |format|
       if @team.update_attributes(params[:team])

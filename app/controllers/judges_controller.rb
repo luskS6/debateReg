@@ -3,6 +3,8 @@ class JudgesController < ApplicationController
   # GET /judges.json
   def index
     @judges = Judge.all
+    @schools = School.all
+    @judges = Judge.where("school_id = ?", params[:sView])
 
     respond_to do |format|
       format.html # index.html.erb

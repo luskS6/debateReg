@@ -41,7 +41,7 @@ class HotelsController < ApplicationController
   # POST /hotels.json
   def create
     @hotel = Hotel.new(params[:hotel])
-    @hotel.school_id = current_user.id
+    @hotel.school_id = current_school.id
 
     respond_to do |format|
       if @hotel.save

@@ -41,7 +41,7 @@ class ReqsController < ApplicationController
   # POST /reqs.json
   def create
     @req = Req.new(params[:req])
-    @req.school_id = current_user.id
+    @req.school_id = current_school.id
 
     respond_to do |format|
       if @req.save

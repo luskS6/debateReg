@@ -1,18 +1,22 @@
+<% if school_signed_in? %>
+
+<% if current_school.role_id == 1 %>
+
 <h1>Listing teams</h1>
-<%= link_to 'Show All Teams', teams_path %></br>
+</br>
 <% for school in @schools.sort{|a,b| a.sName <=> b.sName } %>
 <%= link_to school.sName, teams_path({:sView => school.id})%> |
 <% end %>
 
-<table>
+<table cellspacing = 4>
   <tr>
-    <th>Teamname</th>
-    <th>Tfirstname1</th>
-    <th>Tlastname1</th>
-    <th>Tfirstname2</th>
-    <th>Tlastname2</th>
-    <th>Tseed</th>
-    <th>Texp</th>
+    <th>Team Name</th>
+    <th>Person 1 First name</th>
+    <th>Person 1 last name</th>
+    <th>Person 2 first name</th>
+    <th>Person 2 last name</th>
+    <th>seed</th>
+    <th>exp</th>
     <th>School</th>
     <th></th>
     <th></th>
@@ -38,4 +42,11 @@
 
 <br />
 
-<%= link_to 'New Team', new_team_path %>
+
+<% else %>
+<script type ="text/javascript">
+	window.location.href="/main/index"
+</script>
+<% end %>
+
+<% end %>

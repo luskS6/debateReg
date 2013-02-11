@@ -1,4 +1,13 @@
+<% if school_signed_in? %>
+
+<% if current_school.role_id == 1 %>
+
+
 <h1>Listing hotels</h1>
+</br>
+<% for school in @schools.sort{|a,b| a.sName <=> b.sName } %>
+<%= link_to school.sName, hotels_path({:sView => school.id})%> |
+<% end %>
 
 <table>
   <tr>
@@ -24,4 +33,12 @@
 
 <br />
 
-<%= link_to 'New Hotel', new_hotel_path %>
+
+
+<% else %>
+<script type ="text/javascript">
+	window.location.href="/main/index"
+</script>
+<% end %>
+
+<% end %>

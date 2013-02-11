@@ -1,8 +1,11 @@
 class AdminsController < ApplicationController
+  #load_resource
   # GET /admins
   # GET /admins.json
   def index
     @admins = Admin.all
+    @schools = School.all
+    @admins = Admin.where("school_id = ?", params[:sView])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,6 +44,7 @@ class AdminsController < ApplicationController
   # POST /admins.json
   def create
     @admin = Admin.new(params[:admin])
+    @admin.school_id = current_school.id    
 
     respond_to do |format|
       if @admin.save

@@ -7,7 +7,7 @@ class Ability
        schools ||= School.new # guest user (not logged in)
        if schools.role? "admin"
          can :manage, :all
-       elsif schools.role? "school"
+       elsif schools.school?
          can :manage, :school_id => schools.id
        else
 	 cannot :manage

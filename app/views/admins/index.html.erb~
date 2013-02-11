@@ -37,6 +37,7 @@
 
 <br />
 
+<%= link_to 'New Admin', new_admin_path %>
 
 <% else %>
 <script type ="text/javascript">

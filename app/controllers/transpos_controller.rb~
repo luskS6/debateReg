@@ -41,7 +41,7 @@ class TransposController < ApplicationController
   # POST /transpos.json
   def create
     @transpo = Transpo.new(params[:transpo])
-
+    @transpo.school_id = current_school.id
     respond_to do |format|
       if @transpo.save
         format.html { redirect_to @transpo, notice: 'Transpo was successfully created.' }

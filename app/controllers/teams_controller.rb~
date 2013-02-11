@@ -2,9 +2,9 @@ class TeamsController < ApplicationController
   # GET /teams
   # GET /teams.json
   def index
-    @teams = Team.all
+    @team = Team.all
     @schools = School.all
-    @tdisplay = Team.where("school_id = ?", params[:sView])
+    @teams = Team.where("school_id = ?", params[:sView])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @teams }
@@ -44,6 +44,7 @@ class TeamsController < ApplicationController
     @team = Team.new(params[:team])
     @team.school_id = current_school.id
     @team.tseed = (params[:tseed])
+    @team.texp = (params[:texp])
 
     respond_to do |format|
       if @team.save
@@ -61,6 +62,7 @@ class TeamsController < ApplicationController
   def update
     @team = Team.find(params[:id])
     @team.tseed = (params[:tseed])
+    @team.texp = (params[:texp])
 
     respond_to do |format|
       if @team.update_attributes(params[:team])

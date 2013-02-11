@@ -6,13 +6,13 @@
   <div>School name<br />
   <%= f.text_field :sName %></div>
 
-  <div><%= f.label :repfname %><br />
+  <div>First Name<br />
   <%= f.text_field :repfname %></div>
 
-  <div><%= f.label :replname %><br />
+  <div>Last Name<br />
   <%= f.text_field :replname %></div>
 
-  <div><%= f.label :sphoneNum %><br />
+  <div>Phone Number<br />
   <%= f.text_field :sphoneNum %></div>
 
   <div><%= f.label :email %><br />
@@ -23,6 +23,8 @@
 
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
+
+  <% :roles => 'school' %>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>

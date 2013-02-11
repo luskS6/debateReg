@@ -1,8 +1,11 @@
 class AdminsController < ApplicationController
+  #load_resource
   # GET /admins
   # GET /admins.json
   def index
     @admins = Admin.all
+    @schools = School.all
+    @admins = Admin.where("school_id = ?", params[:sView])
 
     respond_to do |format|
       format.html # index.html.erb

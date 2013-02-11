@@ -27,7 +27,7 @@
 
 <p>
   <b>Seed: </b>
-  <%= @team.texp %>
+  <%= @team.tseed %>
 </p>
 
 

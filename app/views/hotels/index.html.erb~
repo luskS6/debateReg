@@ -1,4 +1,13 @@
+<% if school_signed_in? %>
+
+<% if current_school.role_id == 1 %>
+
+
 <h1>Listing hotels</h1>
+</br>
+<% for school in @schools.sort{|a,b| a.sName <=> b.sName } %>
+<%= link_to school.sName, hotels_path({:sView => school.id})%> |
+<% end %>
 
 <table>
   <tr>
@@ -14,7 +23,7 @@
   <tr>
     <td><%= hotel.twoRooms %></td>
     <td><%= hotel.fourRooms %></td>
-    <td><%= hotel.school_id.sName %></td>
+    <td><%= hotel.school.sName %></td>
     <td><%= link_to 'Show', hotel %></td>
     <td><%= link_to 'Edit', edit_hotel_path(hotel) %></td>
     <td><%= link_to 'Destroy', hotel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,3 +34,11 @@
 <br />
 
 <%= link_to 'New Hotel', new_hotel_path %>
+
+<% else %>
+<script type ="text/javascript">
+	window.location.href="/main/index"
+</script>
+<% end %>
+
+<% end %>
