@@ -14,16 +14,41 @@ Welcome, Overlord. Click on the following links to view what has been entered by
 <%= link_to 'Judges', judges_path %></br>
 <%= link_to 'Transportation', transpos_path %> </br>
 
+</br>
+
+<h2>Registered Schools</h2>
+</br>
+
+<table cellpadding = 4 cellspacing = 4>
+
+<tr>
+<td>School Name</td>
+<td>POC</td>
+<td>Phone Number</td>
+<td>Email</td>
+</tr>
+
+<% @schools.each do |school| %>
+<tr>
+<td><%= school.sName %></td>
+<td><%= school.repfname %> <%= school.replname %></td>
+<td><%= school.sphoneNum %></td>
+<td><%= school.email%></td>
+</tr>
+<% end %>
+
+</table>
+
 <% else %>
 
 <h1>Home</h1>
 </br>
-<p>This is the registration system for the West Point Invitational. All information is saved automatically and can be updated/changed at any time. After our team member has finished processing your entered information, you will be sent a confirmation email. Thanks! and see you soon at the one and only Federally Funded Finishing School for Wayward Youth.</p>
+<p>This is the registration system for the West Point Invitational. All information is saved automatically and can be updated/changed at any time. After our team member has finished processing your entered information, you will be sent a confirmation email. Thanks! And see you soon at the one and only Federally Funded Finishing School for Wayward Youth.</p>
 
 <div id = 'adminnav'>
 <h3>Register your school</h3>
 
-<% if current_school.sign_in_count = 1 %>
+<% if !Admin.find_by_school_id(current_school) %>
 <%= button_to 'Click to start!', new_admin_path %> </br>
 <% end %>
 
@@ -31,15 +56,17 @@ Welcome, Overlord. Click on the following links to view what has been entered by
 <table border = 1 cellspacing = 0>
 
 <tr>
- <% if Admin.find_by_school_id(current_school) %>
+<% if Admin.find_by_school_id(current_school) %>
 <td style = "background-color: #00CC00">
-<%= link_to 'Admin Info', edit_admin_path(Admin.find_by_school_id(current_school)), :style => "color:black" %>
+<%= link_to 'Admin Info', edit_admin_path(Admin.find_by_school_id(current_school)), :style => "color:black", :hover => "white" %>
+</td>
 <% else %>
-</td>
+
 <td style = "background-color: #D90000">
-<%= link_to 'Admin Info', new_admin_path, :style => "color:black" %>
-<% end %>
+<%= link_to 'Admin Info', new_admin_path %>
 </td>
+<% end %>
+
 </tr>
 
 
@@ -47,12 +74,14 @@ Welcome, Overlord. Click on the following links to view what has been entered by
 <% if Hotel.find_by_school_id(current_school) %> 
 <td style = "background-color: #00CC00">
 <%= link_to 'Hotel Rooms', edit_hotel_path(Hotel.find_by_school_id(current_school)), :style => "color:black" %>
+</td>
 <% else %>
-</td>
+
 <td style = "background-color: #D90000"> 
-<%= link_to 'Hotel Rooms', new_hotel_path, :style => "color:black" %>
-<% end %> 
+<%= link_to 'Hotel Rooms', new_hotel_path %>
 </td>
+<% end %> 
+
 </tr>
 
 
@@ -60,25 +89,29 @@ Welcome, Overlord. Click on the following links to view what has been entered by
 <tr>
 <% if Transpo.find_by_school_id(current_school) %> 
 <td style = "background-color: #00CC00"> 
-<%=  link_to 'Transportation', edit_transpo_path(Transpo.find_by_school_id(current_school)), :style => "color:black" %>
+<%= link_to 'Transportation', edit_transpo_path(Transpo.find_by_school_id(current_school)) %>
+</td>
 <% else %> 
-</td>
+
 <td style = "background-color: #D90000">
-<%=  link_to 'Transportation', new_transpo_path, :style => "color:black" %>
-<% end %> 
+<%= link_to 'Transportation', new_transpo_path %>
 </td>
+<% end %> 
+
 </tr>
 
 <tr>
 <% if Req.find_by_school_id(current_school) %> 
 <td style = "background-color: #00CC00">
 <%= link_to 'Special Requirements', edit_req_path(Req.find_by_school_id(current_school)), :style => "color:black" %>
+</td>
 <% else %>
-</td>
+
 <td style = "background-color: #D90000">
-<%= link_to 'Special Requirements', new_req_path, :style => "color:black" %>
-<% end %> 
+<%= link_to 'Special Requirements', new_req_path %>
 </td>
+<% end %> 
+
 </tr>
 
 
@@ -140,6 +173,7 @@ Welcome, Overlord. Click on the following links to view what has been entered by
 
 </div>
 <% end %>
+
 <% else %>
 
 <p>Welcome to the 2013 West Point Invitational online registration! Please click to the 'sign up' or 'sign in' button to continue!</p>

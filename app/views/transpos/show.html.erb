@@ -47,7 +47,7 @@
 
 
 
-
+<div class="next">
 <%= link_to 'Edit', edit_transpo_path(@transpo) %> |
 <%= link_to 'Back to Hotels', edit_hotel_path(Hotel.find_by_school_id(current_school)) %> |
 <% if Req.find_by_school_id(current_school) %> 
@@ -55,3 +55,4 @@
 <% else %>
 <%= link_to 'Next to Special Requirements', new_req_path %>
 <% end %> 
+</div>

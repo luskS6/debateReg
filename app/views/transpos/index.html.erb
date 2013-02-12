@@ -6,7 +6,7 @@
 
 <h1>Listing transpos</h1>
 <% for school in @schools.sort{|a,b| a.sName <=> b.sName } %>
-<%= link_to school.sName, tranpsos_path({:sView => school.id})%> |
+<%= link_to school.sName, transpos_path({:sView => school.id})%> |
 <% end %>
 <table>
   <tr>

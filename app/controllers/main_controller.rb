@@ -3,6 +3,7 @@ class MainController < ApplicationController
      if school_signed_in?
 	@teams = Team.where(:school_id => [current_school.id])
 	@judges = Judge.where(:school_id => [current_school.id])
+	@schools = School.all
      end	
 
 

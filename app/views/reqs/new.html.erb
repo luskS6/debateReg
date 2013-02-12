@@ -2,4 +2,12 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Back to Transportation', edit_transpo_path(Transpo.find_by_school_id(current_school)) %>
+
+
+<% if Transpo.find_by_school_id(current_school) %> 
+<%= link_to 'Back to Transportation', edit_transpo_path(req.find_by_school_id(current_school)) %>
+<% else %>
+<%= link_to 'Back to Transportation', new_transpo_path %>
+<% end %> 
+
+

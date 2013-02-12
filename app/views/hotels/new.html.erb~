@@ -2,4 +2,4 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Back', hotels_path %>
+<%= link_to 'Back to Admin', edit_admin_path(Admin.find_by_school_id(current_school)) %>|

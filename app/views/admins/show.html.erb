@@ -29,7 +29,7 @@
 
 
 
-
+<div class="next">
 <%= link_to 'Edit', edit_admin_path(@admin) %> |
 <%= link_to 'Back to Home', main_index_path %>|
 <% if Hotel.find_by_school_id(current_school) %> 
@@ -37,3 +37,4 @@
 <% else %> 
 <%= link_to 'Next to Hotels', new_hotel_path %>
 <% end %> 
+</div>

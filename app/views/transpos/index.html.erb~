@@ -46,7 +46,7 @@
 
 <br />
 
-<%= link_to 'New Transpo', new_transpo_path %>
+
 <% else %>
 <script type ="text/javascript">
 	window.location.href="/main/index"
