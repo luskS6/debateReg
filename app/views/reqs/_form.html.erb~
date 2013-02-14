@@ -13,11 +13,11 @@
 
   
   <div class="field">
-    <%= f.label :diet %><br />
+    <%= f.label "Any dietary restrictions?" %><br />
     <%= f.text_area :diet %>
   </div>
   <div class="field">
-    <%= f.label :special %><br />
+    <%= f.label "Or anything else we can do to make your West Point experience more enjoyable?" %><br />
     <%= f.text_area :special %>
   </div>
   <div class="actions">

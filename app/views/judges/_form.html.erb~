@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     Debate Experience<br />
-    <%= select_tag(:debate_exp, options_for_select([['Select one','null'],['Novice', 'Novice'],['Varsity','Varsity'],['Dino','Dino']])) %>
+    <%= select_tag(:debate_exp, options_for_select([['Select one',''],['Novice', 'Novice'],['Varsity','Varsity'],['Dino','Dino']])) %>
   </div>
   
   <div class="actions">

@@ -27,6 +27,7 @@
 #main{
 	width: 100%;
 	text-align: left;
+	border-width: thick;	
 }
 
 #sword{
@@ -35,6 +36,9 @@
 	
 }
 
-#user_nav1{
-	width: 100%	
+#user_nav2{
+	width: 100%;	
+	padding-top: 30px;
+	border-width: thick;
+	background-color:blue;
 }

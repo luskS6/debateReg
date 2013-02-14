@@ -4,15 +4,18 @@
 
 #Teams{
 	text-align: center;
-	width: 70%;
+	width: 80%;
 	float: right;
+	background-color:green;
 	
 
 }
 
 #adminnav {
-	width: 10%;
+	width: 20%;
+	height: 160px;
 	float: left;
+	background-color:red;
 
 }
 

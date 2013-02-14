@@ -44,7 +44,7 @@ Welcome, Overlord. Click on the following links to view what has been entered by
 <h1>Home</h1>
 </br>
 <div id = "welcome">
-<p>This is the registration system for the West Point Invitational. All information is saved automatically and can be updated/changed at any time. After our team member has finished processing your entered information, you will be sent a confirmation email. Thanks! And see you soon at the one and only Federally Funded Finishing School for Wayward Youth.</p>
+<p>This is the registration system for the West Point Invitational. All information is saved automatically and can be updated/changed at any time. After our team member has finished processing your entered information, you will be sent a confirmation email.</p> <p>Thanks! And see you soon at the one and only Federally Funded Finishing School for Wayward Youth.</p>
 </div>
 <div id = 'adminnav'>
 <h3>Register your school</h3>

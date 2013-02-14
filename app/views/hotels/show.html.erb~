@@ -1,23 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Tworooms:</b>
+  <b># of Double Occupancy Rooms requested: </b>
   <%= @hotel.twoRooms %>
 </p>
 
 <p>
-  <b>Fourrooms:</b>
+  <b># of 4 person Occupancy Rooms requested: </b>
   <%= @hotel.fourRooms %>
-</p>
-
-<p>
-  <b>School:</b>
-  <%= @hotel.school_id %>
 </p>
 
 
 <%= link_to 'Edit', edit_hotel_path(@hotel) %> |
-<%= link_to 'Back to Admin', edit_admin_path(Admin.find_by_school_id(current_school)) %> |
+<% if Admin.find_by_school_id(current_school) %>
+<%= link_to 'Admin Info', edit_admin_path(Admin.find_by_school_id(current_school)) %>
+</td>
+<% else %>
+
+<td style = "background-color: #D90000">
+<%= link_to 'Admin Info', new_admin_path %>
+</td>
+<% end %>|
 <% if Transpo.find_by_school_id(current_school) %> 
 <%=  link_to 'Next to Transportation', edit_transpo_path(Transpo.find_by_school_id(current_school)) %>
 <% else %> 

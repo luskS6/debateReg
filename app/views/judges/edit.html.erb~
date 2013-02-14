@@ -3,4 +3,4 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @judge %> |
-<%= link_to 'Back', judges_path %>
+

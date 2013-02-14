@@ -15,17 +15,17 @@
 <div id = "sword">
 <%= image_tag "smallsword.png" %>
 </div>
-<div >
+
 </br>
 </br>
 
 
 <%= yield %>
-</div>
-<div id = "user_nav1">
+
+<div id = "user_nav2">
 	<% if school_signed_in? %>
 		
-		Signed in as <%= current_school.sName %>. Not you?
+		Signed in as <b><%= current_school.sName %></b>. Not you?
 		<%= link_to "Sign out", destroy_school_session_path, :method => :delete %>
 	<% else %>
 		<%= link_to "Sign up", new_school_registration_path %> or <%= link_to "Sign in", new_school_session_path%>

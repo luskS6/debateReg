@@ -11,18 +11,18 @@
     </div>
   <% end %>
 
-  <p>This section is only if you need a lift to/from Garrison Train Station on either Friday/Saturday. If you do not need any transportation from us, go to the bottom of the page and press that thing labled "Submit". </p>
+  <p>This section is only if you need a lift to/from Garrison Train Station on either Friday/Saturday. If you do not need any transportation from us, go to the bottom of the page and press that thing labled "Create Transpo". </p>
 
   <div class="field">
-    Check if transportation is required on Friday"<br />
+    Check if transportation is required on Friday<br />
     <%= f.check_box :fpickup %>
   </div>
   <div class="field">
-    "When are you arriving at Garrison on Friday?"<br />
+    When are you arriving at Garrison on Friday?<br />
     <%= f.time_select :fpickup_time %>
   </div>
   <div class="field">
-    "How deep are you rolling?"<br />
+    How deep are you rolling?<br />
     <%= f.number_field :fpickup_number %>
   </div>
   <div class="field">
@@ -38,7 +38,7 @@
     <%= f.number_field :spickup_number %>
   </div>
   <div class="field">
-    "In lieu of a transporter, I need a ride over to Garrison after the delectable activies on Saturday"<br />
+    In lieu of a transporter, I need a ride over to Garrison after the delectable activies on Saturday<br />
     <%= f.check_box :sdropoff %>
   </div>
   <div class="field">
@@ -51,6 +51,6 @@
   </div>
   
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit" %>
   </div>
 <% end %>

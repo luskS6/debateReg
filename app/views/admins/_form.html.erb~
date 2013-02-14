@@ -29,7 +29,7 @@
 
   <div class="field">
     <%= f.label "Point of Contact 2" %><br />
-    <%= f.text_field :contact2, :contact1_confirmation %>
+    <%= f.text_field :contact2 %>
   </div>
   
   <div class="field">

@@ -14,5 +14,5 @@
 
 
 <%= link_to 'Edit', edit_req_path(@req) %> |
-<%= link_to 'Back to Transportation', edit_transpo_path(req.find_by_school_id(current_school)) %> |
+<%= link_to 'Back to Transportation', edit_transpo_path(Transpo.find_by_school_id(current_school)) %> |
 <%= link_to 'Next', main_index_path %>

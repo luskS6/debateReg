@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :twoRooms %><br />
+    <%= f.label "How many double occupancy rooms do you need?" %><br />
     <%= f.number_field :twoRooms %>
   </div>
   <div class="field">
-    <%= f.label :fourRooms %><br />
+    <%= f.label "How many four occupancy rooms do you need? " %><br />
     <%= f.number_field :fourRooms %>
   </div>
   
