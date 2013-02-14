@@ -4,10 +4,8 @@
 
 <h1>Listing admins</h1>
 </br>
-<% for school in @schools.sort{|a,b| a.sName <=> b.sName } %>
-<%= link_to school.sName, admins_path({:sView => school.id})%> |
-<% end %>
-<table>
+
+<table cellspace = 4 cellpadding = 7>
   <tr>
     <th>Early invoice</th>
     <th>Phonenum1</th>
@@ -27,7 +25,7 @@
     <td><%= admin.contact1 %></td>
     <td><%= admin.phoneNum2 %></td>
     <td><%= admin.contact2 %></td>
-    <td><%= admin.school_id %></td>
+    <td><%= admin.school.sName %></td>
     <td><%= link_to 'Show', admin %></td>
     <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
     <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -37,7 +35,6 @@
 
 <br />
 
-<%= link_to 'New Admin', new_admin_path %>
 
 <% else %>
 <script type ="text/javascript">

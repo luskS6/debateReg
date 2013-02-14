@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DebateReg</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title>West Point Invitational Registration</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id = "Header">
+<h1>West Point Invitational</h1>
+<%= link_to "Home", main_index_path %></br>
+</div>
 
-<h1>West Point Invitational</h1><%= link_to "Home", main_index_path %></br>
+<div id = "sword">
+<%= image_tag "smallsword.png" %>
+</div>
+<div >
+</br>
+</br>
+
 
 <%= yield %>
-
+</div>
 <div id = "user_nav1">
 	<% if school_signed_in? %>
 		

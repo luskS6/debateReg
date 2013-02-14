@@ -5,11 +5,8 @@
 
 <h1>Listing hotels</h1>
 </br>
-<% for school in @schools.sort{|a,b| a.sName <=> b.sName } %>
-<%= link_to school.sName, hotels_path({:sView => school.id})%> |
-<% end %>
 
-<table>
+<table cellspace = 4 cellpadding = 7>
   <tr>
     <th>Tworooms</th>
     <th>Fourrooms</th>
@@ -33,7 +30,7 @@
 
 <br />
 
-<%= link_to 'New Hotel', new_hotel_path %>
+
 
 <% else %>
 <script type ="text/javascript">

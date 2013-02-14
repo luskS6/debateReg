@@ -3,7 +3,8 @@ class ReqsController < ApplicationController
   # GET /reqs.json
   def index
     @reqs = Req.all
-
+    @schools = School.all
+    @reqs = Req.where("school_id = ?", params[:sView])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @reqs }

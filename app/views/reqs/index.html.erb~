@@ -20,7 +20,7 @@
 
 <% @reqs.each do |req| %>
   <tr>
-    <td><%= req.school_id %></td>
+    <td><%= req.school.sName%></td>
     <td><%= req.diet %></td>
     <td><%= req.special %></td>
     <td><%= link_to 'Show', req %></td>
@@ -32,7 +32,7 @@
 
 <br />
 
-<%= link_to 'New Req', new_req_path %>
+
 <% else %>
 <script type ="text/javascript">
 	window.location.href="/main/index"

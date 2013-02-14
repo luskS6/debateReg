@@ -17,3 +17,17 @@
 	float: right;
 	padding-top: 20px;
 }
+
+#Header{
+	width: 100%;
+	height: 250px;
+	float: left;
+	background-color:blue;
+	
+}
+
+#sword{
+	width:60%;
+	float: right;
+	background-color: blue;
+}

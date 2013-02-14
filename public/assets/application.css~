@@ -34,5 +34,5 @@ body{background-color:#fff;color:#333;font-family:verdana,arial,helvetica,sans-s
 #sword{
 	width:60%;
 	float: right;
-	
+	background-color: blue;
 }

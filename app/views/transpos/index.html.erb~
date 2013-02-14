@@ -5,20 +5,18 @@
 
 
 <h1>Listing transpos</h1>
-<% for school in @schools.sort{|a,b| a.sName <=> b.sName } %>
-<%= link_to school.sName, tranpsos_path({:sView => school.id})%> |
-<% end %>
-<table>
+
+<table cellspace = 4 cellpadding = 7 >
   <tr>
-    <th>Fpickup</th>
-    <th>Fpickup time</th>
-    <th>Fpickup number</th>
-    <th>Spickup</th>
-    <th>Spickup time</th>
-    <th>Spickup number</th>
-    <th>Sdropoff</th>
-    <th>Sdropoff time</th>
-    <th>Sdropoff number</th>
+    <th>Friday Pickup?</th>
+    <th>Friday Pickup time</th>
+    <th>Friday Pickup Number</th>
+    <th>Saturday Pickup?</th>
+    <th>Time</th>
+    <th>Number</th>
+    <th>Saturday Dropoff?</th>
+    <th>Time</th>
+    <th>Number</th>
     <th>School</th>
     <th></th>
     <th></th>

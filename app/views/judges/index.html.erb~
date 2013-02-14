@@ -34,7 +34,7 @@
 
 <br />
 
-<%= link_to 'New Judge', new_judge_path %>
+
 
 <% else %>
 <script type ="text/javascript">

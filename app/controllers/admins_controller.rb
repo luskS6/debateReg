@@ -5,7 +5,7 @@ class AdminsController < ApplicationController
   def index
     @admins = Admin.all
     @schools = School.all
-    @admins = Admin.where("school_id = ?", params[:sView])
+    #@admins = Admin.where("school_id = ?", params[:sView])
 
     respond_to do |format|
       format.html # index.html.erb

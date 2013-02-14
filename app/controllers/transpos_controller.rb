@@ -4,7 +4,7 @@ class TransposController < ApplicationController
   def index
     @transpos = Transpo.all
     @schools = School.all
-    @transpos = Transpo.where("school_id = ?", params[:sView])
+    #@transpos = Transpo.where("school_id = ?", params[:sView])
 
     respond_to do |format|
       format.html # index.html.erb
