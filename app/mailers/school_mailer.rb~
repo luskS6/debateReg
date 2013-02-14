@@ -8,6 +8,6 @@ ActionMailer::Base.smtp_settings = {
   :domain         => 'floating-meadow-8628.heroku.com',
   :authentication => :plain,
 }
-ActionMailer::Base.delivery_method = :smtp
-ActionMailer::Base.perform_deliveries = true
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.perform_deliveries = true
 end
