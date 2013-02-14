@@ -6,16 +6,16 @@
 	text-align: center;
 	width: 80%;
 	float: right;
-	background-color:green;
+	
 	
 
 }
 
 #adminnav {
 	width: 20%;
-	height: 160px;
+	height: 180px;
 	float: left;
-	background-color:red;
+	
 
 }
 

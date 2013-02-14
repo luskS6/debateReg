@@ -49,7 +49,11 @@
 
 <div class="next">
 <%= link_to 'Edit', edit_transpo_path(@transpo) %> |
-<%= link_to 'Back to Hotels', edit_hotel_path(Hotel.find_by_school_id(current_school)) %> |
+<% if Hotel.find_by_school_id(current_school) %> 
+<%= link_to 'Back to Hotels', edit_hotel_path(Hotel.find_by_school_id(current_school)) %>
+<% else %>
+<%= link_to 'Back to Hotels', new_hotel_path %>
+<% end %>  |
 <% if Req.find_by_school_id(current_school) %> 
 <%= link_to 'Next to Special Requirements', edit_req_path(Req.find_by_school_id(current_school)) %>
 <% else %>
