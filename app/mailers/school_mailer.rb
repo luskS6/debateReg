@@ -1,4 +1,6 @@
-class SchoolMailer < ActionMailer::Base.smtp_settings = {
+class SchoolMailer < ActionMailer::Base
+
+config.action_mailer.smtp_settings = {
   :port           => ENV['MAILGUN_SMTP_PORT'], 
   :address        => ENV['MAILGUN_SMTP_SERVER'],
   :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
@@ -6,6 +8,6 @@ class SchoolMailer < ActionMailer::Base.smtp_settings = {
   :domain         => 'floating-meadow-8628.heroku.com',
   :authentication => :plain,
 }
-ActionMailer::Base.delivery_method = :smtp
-ActionMailer::Base.perform_deliveries = true
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.perform_deliveries = true
 end
