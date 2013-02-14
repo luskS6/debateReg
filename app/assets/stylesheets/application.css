@@ -12,22 +12,25 @@
  *= require_tree .
 */
 
-#user_nav1{
-	width:100%;
-	float: right;
-	padding-top: 20px;
+#welcome{
+	width:40%;
 }
 
 #Header{
-	width: 100%;
-	height: 250px;
+	width: 40%;
+	height: 100px;
 	float: left;
-	background-color:blue;
 	
+	
+}
+
+#main{
+	width: 100%;
+	text-align: left;
 }
 
 #sword{
 	width:60%;
 	float: right;
-	background-color: blue;
+	
 }

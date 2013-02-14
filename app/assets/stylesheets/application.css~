@@ -22,12 +22,12 @@
 	width: 100%;
 	height: 250px;
 	float: left;
-	background-color:blue;
-	text-align: center;
+	
+	
 }
 
 #sword{
 	width:60%;
 	float: right;
-	background-color: blue;
+	
 }
