@@ -50,7 +50,7 @@ Welcome, Overlord. Click on the following links to view what has been entered by
 <h3>Register your school</h3>
 
 <% if !Admin.find_by_school_id(current_school) %>
-<%= button_to 'Click to start!', new_admin_path %> </br>
+<%= button_to 'Click to start!', new_admin_path , :method => "get" %> </br>
 <% end %>
 
 
@@ -130,6 +130,7 @@ Welcome, Overlord. Click on the following links to view what has been entered by
 <td><b>Debator 1</b></td>
 <td><b>Debator 2</b></td>
 <td><b>Seed</b></td>
+<td><b>Experience</b></td>
 <td></td>
 <td></td>
 
@@ -141,6 +142,7 @@ Welcome, Overlord. Click on the following links to view what has been entered by
 <td><%= team.tfirstName1 + " " + team.tlastName1 %></td>
 <td><%= team.tfirstName2 + " " + team.tlastName2 %></td>
 <td><%= team.tseed %></td>
+<td><%= team.texp %></td>
 <td><%= button_to 'Edit', edit_team_path(team) %></td>
 <td><%= button_to 'Delete', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
