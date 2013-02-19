@@ -11,5 +11,5 @@
    Role.find_or_create_by_name role
 end
 
-School.create(sName: 'West Point Admin', email: 'speech@usma.edu', password: 'cisco123', password_confirmation: 'cisco123', role_id: '1' )
+School.create(sName: 'West Point Admin', email: 'speech@usma.edu', password: 'Cisco123!', password_confirmation: 'Cisco123!', role_id: '1' )
 
