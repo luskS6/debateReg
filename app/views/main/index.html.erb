@@ -22,10 +22,11 @@ Welcome, Overlord. Click on the following links to view what has been entered by
 <table cellpadding = 4 cellspacing = 4>
 
 <tr>
-<td>School Name</td>
-<td>POC</td>
-<td>Phone Number</td>
-<td>Email</td>
+<th>School Name</th>
+<th>POC</th>
+<th>Phone Number</th>
+<th>Email</th>
+<th></th>
 </tr>
 
 <% for school in @schools.sort{|a,b| a.sName <=> b.sName } %>
@@ -34,6 +35,9 @@ Welcome, Overlord. Click on the following links to view what has been entered by
 <td><%= school.repfname %> <%= school.replname %></td>
 <td><%= school.sphoneNum %></td>
 <td><%= school.email%></td>
+<td><%= button_to "Destroy", destroy_school_path(school), :data => { :confirm => "Are you sure?" }, :method => :delete %>
+<%= link_to 'Destroy', school_del_path(school.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+</td>
 </tr>
 <% end %>
 

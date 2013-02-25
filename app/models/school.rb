@@ -6,7 +6,7 @@ class School < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :sName, :repfname, :replname, :sphoneNum, :email, :password, :password_confirmation, :remember_me, :roles, :role_id
+  attr_accessible :sName, :repfname, :replname, :sphoneNum, :email, :password, :password_confirmation, :remember_me, :role_id
   # attr_accessible :title, :body
   has_many :teams, :dependent => :destroy
   has_one :hotel, :dependent => :destroy
@@ -14,10 +14,12 @@ class School < ActiveRecord::Base
   has_many :judges, :dependent => :destroy
   has_one :admin, :dependent => :destroy
   has_one :transpo, :dependent => :destroy
-  has_and_belongs_to_many :role 
+  belongs_to :role , :dependent => :destroy
 
 #  ROLES = %w[admin, school]
 
+def destroy
 
+end
 
 end

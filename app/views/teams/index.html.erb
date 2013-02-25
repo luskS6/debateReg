@@ -11,10 +11,8 @@
 <table cellspacing = 4>
   <tr>
     <th>Team Name</th>
-    <th>Person 1 First name</th>
-    <th>Person 1 last name</th>
-    <th>Person 2 first name</th>
-    <th>Person 2 last name</th>
+    <th>Person 1</th>
+    <th>Person 2</th>
     <th>seed</th>
     <th>exp</th>
     <th>School</th>
@@ -26,10 +24,8 @@
 <% @teams.each do |team| %>
   <tr>
     <td><%= team.teamName %></td>
-    <td><%= team.tfirstName1 %></td>
-    <td><%= team.tlastName1 %></td>
-    <td><%= team.tfirstName2 %></td>
-    <td><%= team.tlastName2 %></td>
+    <td><%= team.tfirstName1 %> <%= team.tlastName1 %></td>
+    <td><%= team.tfirstName2 %> <%= team.tlastName2 %></td>
     <td><%= team.tseed %></td>
     <td><%= team.texp %></td>
     <td><%= team.school.sName %></td>

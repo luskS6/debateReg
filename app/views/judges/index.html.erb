@@ -10,8 +10,7 @@
 <% end %>
 <table>
   <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
+    <th>Name</th>
     <th>Debate Exp</th>
     <th>School</th>
     <th></th>
@@ -21,8 +20,7 @@
 
 <% @judges.each do |judge| %>
   <tr>
-    <td><%= judge.jfirstName %></td>
-    <td><%= judge.jlastName %></td>
+    <td><%= judge.jfirstName %> <%= judge.jlastName %></td>
     <td><%= judge.debate_exp %></td>
     <td><%= judge.school.sName %></td>
     <td><%= link_to 'Show', judge %></td>

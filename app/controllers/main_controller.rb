@@ -5,7 +5,17 @@ class MainController < ApplicationController
 	@judges = Judge.where(:school_id => [current_school.id])
 	@schools = School.all
      end	
-
+  
+  
 
   end
+
+ def destroy
+    @schools = School.find(params[:school])
+    if @schools.present?
+      @schools.destroy
+    end
+    redirect_to root_url
+end
+
 end
