@@ -11,7 +11,7 @@ DebateReg::Application.routes.draw do
   root :to => "main#index"
 
   devise_for :schools
-  #match '/schools/:id', :to => 'users#show',    :as => :user,         :via => :get
+  match '/schools/:id', :to => 'main#destroy',    :as => :school_del,         :via => :delete
   
 
   devise_scope :school do

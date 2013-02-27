@@ -14,10 +14,7 @@ DebateReg::Application.routes.draw do
   match '/schools/:id', :to => 'main#destroy',    :as => :school_del,         :via => :delete
   
 
-  devise_scope :school do
-    #get '/users/new' => 'registrations#new'
-    match '/schools/:id', :to => 'devise/registrations#destroy', :as => :destroy_school, :via => :delete
-  end
+ 
 
   resources :reqs
 

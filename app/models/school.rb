@@ -18,8 +18,29 @@ class School < ActiveRecord::Base
 
 #  ROLES = %w[admin, school]
 
-def destroy
 
+def teamCost(school)
+	tcost = 0
+        jcost = 0
+        hcost = 0
+    tcost = 120 * (Team.where("school_id=?", school).count)
+    
+    Hotel.where("school_id=?", school).each do |hotel|
+	hcost = 85 * (hotel.twoRooms) + 105 * (hotel.fourRooms)
+	    
+    end    
+   
+
+   if (Team.where("school_id=?", school).count - 1)%2 == 1   
+      jcost = (((Team.where("school_id=?", school).count - 1)/2) - Judge.where("school_id=?", school).count)*60
+   else
+      jcost = (((Team.where("school_id=?", school).count - 1)/2) + 1 - Judge.where("school_id=?", school).count)*60
+   end
+
+   
+
+  return tcost + jcost + hcost
+  #return school
 end
 
 end

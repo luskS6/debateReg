@@ -26,6 +26,7 @@ Welcome, Overlord. Click on the following links to view what has been entered by
 <th>POC</th>
 <th>Phone Number</th>
 <th>Email</th>
+<th>Cost for this team</th>
 <th></th>
 </tr>
 
@@ -34,10 +35,11 @@ Welcome, Overlord. Click on the following links to view what has been entered by
 <td><%= school.sName %></td>
 <td><%= school.repfname %> <%= school.replname %></td>
 <td><%= school.sphoneNum %></td>
-<td><%= school.email%></td>
-<td><%= button_to "Destroy", destroy_school_path(school), :data => { :confirm => "Are you sure?" }, :method => :delete %>
-<%= link_to 'Destroy', school_del_path(school), method: :delete, data: { confirm: 'Are you sure?' } %>
-</td>
+<td><%= school.email %></td>
+<td><%= school.teamCost(school.id) %></td>
+<% if school.role != 1 %>
+<td><%= button_to 'Destroy', school_del_path(school), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
 </tr>
 <% end %>
 

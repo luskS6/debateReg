@@ -3,9 +3,12 @@ class Team < ActiveRecord::Base
   belongs_to :school
   validates :teamName, :tfirstName1, :tfirstName2, :tlastName1, :tlastName2, :tseed, :presence => true
 
-def teamCost
-
-
+def teamCost(school_id)
+	cost = Integer.new
+    Team.find_each("school_id=?", school_id) do |team|
+        cost = cost + 120
+    return cost 
+end
 end
 
 end

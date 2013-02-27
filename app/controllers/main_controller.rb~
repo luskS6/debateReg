@@ -10,7 +10,7 @@ class MainController < ApplicationController
 
   end
 
- def destroy
+ def destroy(school)
     @schools = School.find(params[:id])
     if @schools.present?
       @schools.destroy
