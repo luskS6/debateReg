@@ -15,7 +15,6 @@
     <th>School</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @judges.each do |judge| %>
@@ -23,7 +22,6 @@
     <td><%= judge.jfirstName %> <%= judge.jlastName %></td>
     <td><%= judge.debate_exp %></td>
     <td><%= judge.school.sName %></td>
-    <td><%= link_to 'Show', judge %></td>
     <td><%= link_to 'Edit', edit_judge_path(judge) %></td>
     <td><%= link_to 'Destroy', judge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>

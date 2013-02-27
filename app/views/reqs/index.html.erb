@@ -13,15 +13,13 @@
     <th>Special</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
-<% @reqs.each do |req| %>
+<% for req in @reqs.sort{|a,b| a.sName <=> b.sName } %>
   <tr>
     <td><%= req.school.sName%></td>
     <td><%= req.diet %></td>
     <td><%= req.special %></td>
-    <td><%= link_to 'Show', req %></td>
     <td><%= link_to 'Edit', edit_req_path(req) %></td>
     <td><%= link_to 'Destroy', req, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>

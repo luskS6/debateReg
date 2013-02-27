@@ -5,10 +5,8 @@
 
 <h1>Listing reqs</h1>
 </br>
-<% for school in @schools.sort{|a,b| a.sName <=> b.sName } %>
-<%= link_to school.sName, reqs_path({:sView => school.id})%> |
-<% end %>
-<table>
+
+<table cellspace = 4 cellpadding = 7 >
   <tr>
     <th>School</th>
     <th>Diet</th>
@@ -18,7 +16,7 @@
     <th></th>
   </tr>
 
-<% @reqs.each do |req| %>
+<% for req in @reqs.sort{|a,b| a.sName <=> b.sName } %>
   <tr>
     <td><%= req.school.sName%></td>
     <td><%= req.diet %></td>

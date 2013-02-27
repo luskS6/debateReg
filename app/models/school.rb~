@@ -18,13 +18,6 @@ class School < ActiveRecord::Base
 
 #  ROLES = %w[admin, school]
 
-def destroy(school)
- @schools = School.find_by_id(school)
-    if @schools.present?
-      @schools.destroy
-    end
-    redirect_to root_url
-end
 
 def teamCost(school)
 	tcost = 0

@@ -23,7 +23,7 @@
     <th></th>
   </tr>
 
-<% @transpos.each do |transpo| %>
+<% for transpo in @transpos.sort{|a,b| a.sName <=> b.sName } %>
   <tr>
     <td><%= transpo.fpickup %></td>
     <td><%= transpo.fpickup_time %></td>
@@ -34,7 +34,7 @@
     <td><%= transpo.sdropoff %></td>
     <td><%= transpo.sdropoff_time %></td>
     <td><%= transpo.sdropoff_number %></td>
-    <td><%= transpo.school_id %></td>
+    <td><%= transpo.school.sName %></td>
     <td><%= link_to 'Show', transpo %></td>
     <td><%= link_to 'Edit', edit_transpo_path(transpo) %></td>
     <td><%= link_to 'Destroy', transpo, method: :delete, data: { confirm: 'Are you sure?' } %></td>

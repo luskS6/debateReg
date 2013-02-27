@@ -21,7 +21,6 @@
 <% @judges.each do |judge| %>
   <tr>
     <td><%= judge.jfirstName %> <%= judge.jlastName %></td>
-    <td></td>
     <td><%= judge.debate_exp %></td>
     <td><%= judge.school.sName %></td>
     <td><%= link_to 'Show', judge %></td>

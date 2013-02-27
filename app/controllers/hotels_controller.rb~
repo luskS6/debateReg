@@ -4,7 +4,7 @@ class HotelsController < ApplicationController
   def index
     @hotels = Hotel.all
     @schools = School.all
-    @hotels = Hotel.where("school_id = ?", params[:sView])
+    #@hotels = Hotel.where("school_id = ?", params[:sView])
 	
     respond_to do |format|
       format.html # index.html.erb

@@ -18,7 +18,6 @@
     <th>School</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @teams.each do |team| %>
@@ -29,7 +28,6 @@
     <td><%= team.tseed %></td>
     <td><%= team.texp %></td>
     <td><%= team.school.sName %></td>
-    <td><%= link_to 'Show', team %></td>
     <td><%= link_to 'Edit', edit_team_path(team) %></td>
     <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>

@@ -26,7 +26,6 @@
     <td><%= team.teamName %></td>
     <td><%= team.tfirstName1 %> <%= team.tlastName1 %></td>
     <td><%= team.tfirstName2 %> <%= team.tlastName2 %></td>
-    <td></td>
     <td><%= team.tseed %></td>
     <td><%= team.texp %></td>
     <td><%= team.school.sName %></td>

@@ -8,15 +8,15 @@
 
 <table cellspace = 4 cellpadding = 7>
   <tr>
-    <th>Tworooms</th>
-    <th>Fourrooms</th>
+    <th>Two Rooms</th>
+    <th>Four Rooms</th>
     <th>School</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @hotels.each do |hotel| %>
+<% for hotel in @hotels.sort{|a,b| a.sName <=> b.sName } %>
   <tr>
     <td><%= hotel.twoRooms %></td>
     <td><%= hotel.fourRooms %></td>

@@ -8,17 +8,17 @@
 <table cellspace = 4 cellpadding = 7>
   <tr>
     <th>Early invoice</th>
-    <th>Phonenum1</th>
-    <th>Contact1</th>
-    <th>Phonenum2</th>
-    <th>Contact2</th>
+    <th>Phone Number</th>
+    <th>Contact</th>
+    <th>Phone Number</th>
+    <th>Contact</th>
     <th>School</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @admins.each do |admin| %>
+<% for admin in @admins.sort{|a,b| a.sName <=> b.sName } %>
   <tr>
     <td><%= admin.early_invoice %></td>
     <td><%= admin.phoneNum1 %></td>

@@ -32,9 +32,9 @@ def teamCost(school)
    
 
    if (Team.where("school_id=?", school).count - 1)%2 == 1   
-      jcost = (((Team.where("school_id=?", school).count - 1)/2) - Judge.where("school_id=?", school).count)*60
-   else
       jcost = (((Team.where("school_id=?", school).count - 1)/2) + 1 - Judge.where("school_id=?", school).count)*60
+   else
+      jcost = (((Team.where("school_id=?", school).count - 1)/2)  - Judge.where("school_id=?", school).count)*60
    end
 
    
