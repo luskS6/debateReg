@@ -15,7 +15,7 @@
     <th></th>
   </tr>
 
-<% for req in @reqs.sort{|a,b| a.sName <=> b.sName } %>
+<% for req in @reqs.sort{|a,b| a.school.sName <=> b.school.sName } %>
   <tr>
     <td><%= req.school.sName%></td>
     <td><%= req.diet %></td>

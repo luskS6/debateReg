@@ -13,7 +13,6 @@
     <th>School</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% for hotel in @hotels.sort{|a,b| a.sName <=> b.sName } %>
@@ -21,7 +20,6 @@
     <td><%= hotel.twoRooms %></td>
     <td><%= hotel.fourRooms %></td>
     <td><%= hotel.school.sName %></td>
-    <td><%= link_to 'Show', hotel %></td>
     <td><%= link_to 'Edit', edit_hotel_path(hotel) %></td>
     <td><%= link_to 'Destroy', hotel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>

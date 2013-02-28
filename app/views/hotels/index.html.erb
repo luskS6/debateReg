@@ -15,7 +15,7 @@
     <th></th>
   </tr>
 
-<% for hotel in @hotels.sort{|a,b| a.sName <=> b.sName } %>
+<% for hotel in @hotels.sort{|a,b| a.school.sName <=> b.school.sName } %>
   <tr>
     <td><%= hotel.twoRooms %></td>
     <td><%= hotel.fourRooms %></td>
