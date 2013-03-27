@@ -22,7 +22,7 @@
     <th></th>
   </tr>
 
-<% for transpo in @transpos.sort{|a,b| a.sName <=> b.sName } %>
+<% for transpo in @transpos.sort{|a,b| a.school.sName <=> b.school.sName } %>
   <tr>
     <td><%= transpo.fpickup %></td>
     <td><%= transpo.fpickup_time %></td>
